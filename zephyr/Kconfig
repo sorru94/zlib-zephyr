@@ -1,0 +1,8 @@
+# (C) Copyright 2024, SECO Mind Srl
+#
+# SPDX-License-Identifier: Apache-2.0
+
+config ZLIB
+	bool "Zlib data compression and decompression"
+	help
+	  This option enables zlib compression & decompression library support.

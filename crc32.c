@@ -1012,10 +1012,12 @@ unsigned long ZEXPORT crc32_z(unsigned long crc, const unsigned char FAR *buf,
 #endif
 
 /* ========================================================================= */
+#if !defined(CONFIG_ZLIB_NO_CRC32)
 unsigned long ZEXPORT crc32(unsigned long crc, const unsigned char FAR *buf,
                             uInt len) {
     return crc32_z(crc, buf, len);
 }
+#endif
 
 /* ========================================================================= */
 uLong ZEXPORT crc32_combine64(uLong crc1, uLong crc2, z_off64_t len2) {

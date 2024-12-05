@@ -6,3 +6,8 @@ config ZLIB
 	bool "Zlib data compression and decompression"
 	help
 	  This option enables zlib compression & decompression library support.
+
+config ZLIB_NO_CRC32
+	bool "Disable the crc32 function"
+	help
+	  Added for compatibility with Zephyr 4.0.

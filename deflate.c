@@ -1607,7 +1607,9 @@ local void check_match(deflate_state *s, IPos start, IPos match, int length) {
 #define MAX_STORED 65535
 
 /* Minimum of a and b. */
+#if !defined(CONFIG_ZLIB_NO_CRC32)
 #define MIN(a, b) ((a) > (b) ? (b) : (a))
+#endif
 
 /* ===========================================================================
  * Copy without compression as much as possible from the input stream, return
